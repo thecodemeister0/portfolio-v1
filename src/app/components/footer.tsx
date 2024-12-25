@@ -5,7 +5,6 @@ export async function Footer() {
   const response = await data.json();
   const content = response.docs[0];
 
-  console.log(content);
   return (
     <footer>
       <RichText data={content.description} />
