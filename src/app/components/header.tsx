@@ -1,6 +1,6 @@
 import { SocialLinks } from "./social-links";
 
-export default async function Header() {
+export async function Header() {
   const data = await fetch("http://localhost:3000/api/headers");
   const response = await data.json();
   const content: {
