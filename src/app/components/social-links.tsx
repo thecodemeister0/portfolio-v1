@@ -1,7 +1,10 @@
 import { Github, Instagram, Linkedin } from "lucide-react";
+import { baseUrl } from "../constants";
+
+const endpoint = "/api/socialLinks";
 
 export async function SocialLinks() {
-  const data = await fetch("http://localhost:3000/api/socialLinks");
+  const data = await fetch(`${baseUrl}${endpoint}`);
   const response = await data.json();
   const content: Array<{
     id: string;

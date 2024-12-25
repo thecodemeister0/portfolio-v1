@@ -1,8 +1,10 @@
+import { baseUrl } from "../constants";
 import { Anchor } from "./anchor";
 import { StickyHeader } from "./sticky-header";
+const endpoint = "/api/experience";
 
 export async function Experience() {
-  const data = await fetch("http://localhost:3000/api/experience");
+  const data = await fetch(`${baseUrl}${endpoint}`);
   const response = await data.json();
   const content: Array<{
     id: string;

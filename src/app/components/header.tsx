@@ -1,7 +1,10 @@
+import { baseUrl } from "../constants";
 import { SocialLinks } from "./social-links";
 
+const endpoint = "/api/headers";
+
 export async function Header() {
-  const data = await fetch("http://localhost:3000/api/headers");
+  const data = await fetch(`${baseUrl}${endpoint}`);
   const response = await data.json();
   const content: {
     name: string;

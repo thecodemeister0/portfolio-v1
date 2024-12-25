@@ -1,8 +1,11 @@
+import { baseUrl } from "../constants";
 import { Anchor } from "./anchor";
 import { StickyHeader } from "./sticky-header";
 
+const endpoint = "/api/projects";
+
 export async function Projects() {
-  const data = await fetch("http://localhost:3000/api/projects");
+  const data = await fetch(`${baseUrl}${endpoint}`);
   const response = await data.json();
   const content: Array<{
     id: string;

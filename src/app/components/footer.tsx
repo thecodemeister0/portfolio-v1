@@ -1,7 +1,9 @@
 import { RichText } from "@payloadcms/richtext-lexical/react";
+import { baseUrl } from "../constants";
 
+const endpoint = "/api/footer";
 export async function Footer() {
-  const data = await fetch("http://localhost:3000/api/footer");
+  const data = await fetch(`${baseUrl}${endpoint}`);
   const response = await data.json();
   const content = response.docs[0];
 
