@@ -10,12 +10,12 @@ export default function Home() {
       <div></div>
       <div
         className={
-          "mx-auto min-h-screen max-w-screen px-6 py-12 font-sans md:px-12 lg:py-0"
+          "mx-auto lg:mx-20 min-h-screen max-w-screen px-12 py-12 font-sans md:px-12 lg:py-0"
         }
       >
         <div className={"lg:flex lg:justify-between lg:gap-4"}>
           <Header />
-          <main className="pt-24 lg:w-[52%] lg:py-24">
+          <main className="pt-24 lg:w-[70%] lg:py-24">
             <About />
             <Experience />
             <Projects />
